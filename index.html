@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <video autoplay muted loop id="video-fondo">
+        <source src="211791_medium.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+    </video>
+    <div class="bienvenida" id="bienvenida">
+        <h1>Encriptador de texto</h1>
+        <button class="boton-iniciar" onclick="iniciarPagina()">Iniciar</button>
+    </div>
+  <div class="contenedor" id="contenedor" style="display: none;">
+    <header> 
+        <h1 class="logo-a">a</h1>
+    </header>
+    <main>
+            <div class="encriptar">
+                <textarea name="texto"  class="entrada-texto" id="entrada-texto" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="advertencia-entrada">
+                    <img  class="ad-img" src="bi_exclamation-circle-fill.png" alt="símbolo de exclamación">
+                    <p class="advertencia-texto-entrada">Solo letras minúsculas y sin tildes</p>
+                </div>
+                <div class="botones">
+                    <button class="boton-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                    <button class="boton-desencriptar" type="button" onclick="desencriptar()" >Desencriptar</button>
+                </div>
+            </div>
+            <div class="encriptado">
+                <span class="loader"></span>
+                <span class="loader-dos" style="display: none;" id="loader-dos"></span>
+                <div class="encriptado-salida">
+                    <h2 id="salida-titulo">Ningún mensaje fue encontrado</h2>
+                    <p id="salida-parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    <button class="boton-desencriptar" id="boton-copiar" type="button" style="display: none;" onclick="copiar()">Copiar</button>    
+                </div>
+            </div>
+    </main>
+  </div> 
+    <script src="app.js"></script>
+</body>
+</html>
