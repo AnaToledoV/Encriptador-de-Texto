@@ -4,7 +4,7 @@ function iniciarPagina() {
 } 
 
 function tieneMayusculasOAcentos(texto) {
-    return /[A-ZÁÉÍÓÚÜÑáéíóúüñ]/.test(texto);
+    return /[^a-z\s]/.test(texto);
 }
 
 function encriptar() {
