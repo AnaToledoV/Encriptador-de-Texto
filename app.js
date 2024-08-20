@@ -18,7 +18,7 @@ function encriptar() {
     if (tieneMayusculasOAcentos(entradaTexto)) {
         loaderDos.style.display = 'block';
         document.getElementById("salida-titulo").textContent = "ERROR";
-        document.getElementById("salida-parrafo").textContent = "El texto contiene mayúsculas o tildes";
+        document.getElementById("salida-parrafo").textContent = "El texto contiene mayúsculas o caracteres especiales";
         document.getElementById("entrada-texto").value = "";
         return;
     }
@@ -56,7 +56,7 @@ function desencriptar() {
     if (tieneMayusculasOAcentos(entradaTexto)) {
         loaderDos.style.display = 'block'
         document.getElementById("salida-titulo").textContent = "ERROR";
-        document.getElementById("salida-parrafo").textContent = "El texto contiene mayúsculas o tildes";
+        document.getElementById("salida-parrafo").textContent = "El texto contiene mayúsculas o caracteres especiales";
         document.getElementById("entrada-texto").value = "";
         return;
     }
